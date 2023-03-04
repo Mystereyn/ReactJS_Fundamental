@@ -1,14 +1,19 @@
-import * as React from "react";
-import { useState } from "react";
-function App() {
-  let [count,setCount] =  useState(0);
 
-  return ( <div>
-    <p> You have clicked {count} on times</p>
-    <button onClick={() => setCount(count--)}>
-      Hey, Click this!
-    </button>
-  </div>)
+
+function App() {
+    let properties = {
+        author : "Teuku",
+        message : "Hello i am Teuku"
+    }
+    properties.age = 21
+
+    if(properties) {
+        delete properties.author;
+    } 
+    else {
+        properties.nameApp = "ReactJs" 
+    }
+    return console.log(properties);
 }
 
 export default App;
