@@ -20,5 +20,8 @@ yarn.lock
 .env.production.local
 
 npm-debug.log*
+
+# YARN DEPENDENCIES
 yarn-debug.log*
 yarn-error.log*
+/yarn.lock
