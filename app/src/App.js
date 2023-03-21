@@ -1,12 +1,12 @@
-import React from "react";
-import LearnUseState from "./hooks/LearnUseState";
+import react from "react";
+import cardHeader from "./components/cardHeader";
 
-function App() {
-    <div className="App">
-        <header className="App-header">
-            <h2>{LearnUseState}</h2>
-        </header>
-    </div>
+function App () {
+  return (
+      <>
+        <cardHeader/>
+      </>
+  )
 }
 
 export default App;
