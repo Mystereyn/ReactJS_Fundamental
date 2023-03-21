@@ -1,10 +1,12 @@
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button"
-function cardHeader() {
+import Button from "react-bootstrap/Button";
+import myPhoto from "../image/myPhoto.jpg";
+
+function CardHeader() {
     return (
         <>
             <Card style={{width:'19rem'}}>
-                <Card.Img variant="top" src="../image/myPhoto.png"/>
+                <Card.Img variant="top" src="holder.js/100px180"/>
                 <Card.Body>
                     <Card.Title>Hello I am Mystereyn</Card.Title>
                     <Card.Text>
@@ -20,4 +22,4 @@ function cardHeader() {
         </>
     )
 }
-export default cardHeader;
+export default CardHeader;

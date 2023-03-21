@@ -1,10 +1,10 @@
 import react from "react";
-import cardHeader from "./components/cardHeader";
-
+import CardHeader from "./components/cardHeader";
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App () {
   return (
       <>
-        <cardHeader/>
+        <CardHeader/>
       </>
   )
 }
