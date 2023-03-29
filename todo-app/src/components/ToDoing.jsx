@@ -1,20 +1,29 @@
 import * as React from 'react';
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import CssBaseline  from '@mui/material/CssBaseline';
-import ButtonGroup from "@mui/material/ButtonGroup";
-import {Button}  from '@mui/material';
-// import "../ToDoing.css";
+import Button  from "react-bootstrap/Button";
+import Stack from '@mui/material/Stack';
+import {useState} from "react";
+
+import "../ToDoing.css";
 
 function ToDoing() {
-      
+
+    const [showAlert, setShowAlert] = useState(false);
+
+    const toggle = () => {
+        alert("You have clicked this you can close now" + setShowAlert(showAlert));
+    }
+        
     return (
         <div className='To-Doing'>
             <div className="form">
-                <div className="btn-groups-row">
-                    <Button variant='contained'>
-                        <Button>Add</Button>
-                    </Button>
+                <div className="buttons-group-row">
+                    {/* Stack is a  */}
+                    <Stack direction="row" spacing={0.5}>
+                        <Button variant='primary' onClick={toggle}>Add/Tambahkan</Button>
+                        <Button variant='danger'>Delete/Hapus</Button>
+                    </Stack>    
                 </div>
             </div>
         </div>
