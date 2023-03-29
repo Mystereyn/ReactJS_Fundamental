@@ -24,7 +24,7 @@ function ToDoing() {
                         <Button variant='primary' onClick={toggle}>Add/Tambahkan</Button>
                         <Button variant='danger'>Delete/Hapus</Button>
                     </Stack>    
-                </div>
+                </div
             </div>
         </div>
     )
