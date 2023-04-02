@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import {Button}  from "react-bootstrap";
 import Stack from '@mui/material/Stack';
-
 import {useState} from "react";
 // An input from mui that require for user type their activies list.
 import Input  from '@mui/joy/Input';
@@ -13,6 +12,20 @@ import "../ToDoing.css";
 
 
 function ToDoing() {
+
+    // need a state variable using state hook reactjs, 
+    // the parentheses here is a meanly for default value
+    const [userInputValue, setUserInputValue] = useState('');
+
+    // when button clicked by user, and user see the result of value at the console
+    // browser. thanks chatGPT.
+    const userSubmit = () => {
+        console.log(userInputValue);
+    }
+    const userReset = () => {
+        setUserInputValue('');
+    }
+
     return (
         <div className='To-Doing-App'>
             <div className='Container'>
@@ -25,7 +38,9 @@ function ToDoing() {
                         <div id="input-activity/ies">
                             <Input placeholder='Type your activy/ies here'
                                    variant="outlined"
-                                   color="neutral">
+                                   color="neutral"
+                                   value={userInputValue}
+                                   onChange={(eventFill) => setUserInputValue(eventFill.target.value)}>
                             </Input>
                         </div>
                         <div className='btn'>
@@ -38,8 +53,8 @@ function ToDoing() {
                                     flexWrap: 'wrap'
                                 }}/>
                                 <Stack direction="row" spacing={0.5}>
-                                    <Button variant='primary'>Add/Tambahkan</Button>
-                                    <Button variant='danger'>Delete/Hapus</Button>
+                                    <Button variant='primary' onClick={userSubmit}>Add/Tambahkan </Button>
+                                    <Button variant="danger" onClick={userReset}>Reset/Diulang</Button>
                                 </Stack>
                             </span>
                         </div>
